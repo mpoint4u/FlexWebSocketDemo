@@ -6,7 +6,7 @@
 :: http://livedocs.adobe.com/flex/3/html/distributing_apps_4.html#1037515
 
 :: Path to Flex SDK binaries
-set PATH=%PATH%;D:\SOFT\dev\fdevelop\Tools\flexsdk\bin
+set PATH=%PATH%;C:\Users\marcus\sdks\flexairsdk-4.6.0-17.0.0\bin
 
 :: Certificate information
 set NAME="FlexWebSocketDemo"
