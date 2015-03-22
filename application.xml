@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?> 
-<application xmlns="http://ns.adobe.com/air/application/1.5"> 
+<application xmlns="http://ns.adobe.com/air/application/3.5"> 
 	
 	<id>FlexWebSocketDemo</id> 
-	<version>1.0</version> 
+	<versionNumber>0.0.1</versionNumber> 
 	<filename>FlexWebSocketDemo</filename> 
 	
 	<name>FlexWebSocketDemo</name> 

@@ -8,14 +8,15 @@
 
 	 <fx:Script>
               <![CDATA[
+				import com.adobe.serialization.json.*;
+
 				import flash.events.*;
 				import flash.net.*;
 				import flash.system.*;
 				import flash.utils.*;
-				import WebSocket;
-				import com.adobe.serialization.json.*;
-				
 				import mx.collections.ArrayCollection;
+				import WebSocket;
+				
 				
 				[Bindable]
 				private var msgBuffer: ArrayCollection;
@@ -27,8 +28,8 @@
 				private function init():void {
 					msgBuffer = new ArrayCollection([]);
 					sessionId = null;
-					loadPolicyFile("xmlsocket://192.168.1.16:843");
-					websock = new WebSocket(this, "ws://192.168.1.16:8080/socket.io/flashsocket","");
+					loadPolicyFile("xmlsocket://192.168.1.185:843");
+					websock = new WebSocket(this, "ws://192.168.1.185:3000/socket.io/flashsocket","");
 					websock.addEventListener("open", onOpen);
 					websock.addEventListener("close", onClose);
 					websock.addEventListener("message", onMessage);
@@ -75,8 +76,12 @@
 			}
 			private function parseMsg(s:String):void
 			{
-				var msg:Object = JSON.decode(s);
+				//var msg:Object = JSON.decode(s);
 
+				var msg:Object = com.adobe.serialization.json.JSON.decode(s);
+				
+				
+				
 				if (msg.announcement != null) {
 					trace("announcement :" + msg.announcement);
 					addToList(msg.announcement);
@@ -128,11 +133,11 @@
 				msgbox.text="";
 			}
 			public function getCallerHost():String {
-				return ("http://192.168.1.16");
+				return ("http://192.168.1.185");
 			}
    
 			public function getOrigin():String {
-				return ("http://192.168.1.16");
+				return ("http://192.168.1.185");
 			}
 		
 			public function fatal(str:String):void

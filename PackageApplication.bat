@@ -5,7 +5,7 @@
 :: http://livedocs.adobe.com/flex/3/html/help.html?content=CommandLineTools_5.html#1035959
 
 :: Path to Flex SDK binaries
-set PATH=%PATH%;D:\SOFT\dev\fdevelop\Tools\flexsdk\bin
+set PATH=%PATH%;C:\Users\marcus\sdks\flexairsdk-4.6.0-17.0.0\bin
 
 :: Signature (see 'CreateCertificate.bat')
 set CERTIFICATE="FlexWebSocketDemo.pfx"
