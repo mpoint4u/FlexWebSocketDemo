@@ -28,8 +28,8 @@
 				private function init():void {
 					msgBuffer = new ArrayCollection([]);
 					sessionId = null;
-					loadPolicyFile("xmlsocket://192.168.1.185:843");
-					websock = new WebSocket(this, "ws://192.168.1.185:3000/socket.io/flashsocket","");
+					loadPolicyFile("xmlsocket://127.0.0.1:843");
+					websock = new WebSocket(this, "ws://127.0.0.1:3000/socket.io/flashsocket","");
 					websock.addEventListener("open", onOpen);
 					websock.addEventListener("close", onClose);
 					websock.addEventListener("message", onMessage);
@@ -133,11 +133,11 @@
 				msgbox.text="";
 			}
 			public function getCallerHost():String {
-				return ("http://192.168.1.185");
+				return ("http://127.0.0.1");
 			}
    
 			public function getOrigin():String {
-				return ("http://192.168.1.185");
+				return ("http://127.0.0.1");
 			}
 		
 			public function fatal(str:String):void
